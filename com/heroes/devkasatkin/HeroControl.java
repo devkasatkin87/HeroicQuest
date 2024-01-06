@@ -12,7 +12,10 @@ public class HeroControl {
     }
 
     public void getDamage(int attack) {
-        hero.setHealth(hero.getHealth() - attack);
+        if (attack > hero.getDefence()) {
+            attack = attack - hero.getDefence();
+            hero.setHealth(hero.getHealth() - attack);
+        }
     }
 
     public void makeAttack() {}
