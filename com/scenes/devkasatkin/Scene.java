@@ -3,26 +3,26 @@ package com.scenes.devkasatkin;
 import com.heroes.devkasatkin.Hero;
 
 public abstract class Scene {
-	private int doorСount;
+	private int roomsСount;
 	private int monsterCount;
 	private int treasureCount;
 	private String textLor;
 
 	private Hero[] heroes;
 
-	public Scene(int doorСount, int monsterCount, int treasureCount, String textLor) {
-		this.doorСount = doorСount;
+	public Scene(int roomsСount, int monsterCount, int treasureCount, String textLor) {
+		this.roomsСount = roomsСount;
 		this.monsterCount = monsterCount;
 		this.treasureCount = treasureCount;
 		this.textLor = textLor;
 	}
 
-	public int getDoorСount() {
-		return doorСount;
+	public int getRoomsСount() {
+		return roomsСount;
 	}
 
-	public void setDoorСount(int doorСount) {
-		this.doorСount = doorСount;
+	public void setRoomsСount(int roomsСount) {
+		this.roomsСount = roomsСount;
 	}
 
 	public int getMonsterCount() {
