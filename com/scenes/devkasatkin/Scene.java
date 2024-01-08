@@ -1,25 +1,28 @@
 package com.scenes.devkasatkin;
 
+import com.heroes.devkasatkin.Hero;
+
 public abstract class Scene {
-	private int doorcount;
+	private int doorСount;
 	private int monsterCount;
 	private int treasureCount;
-
 	private String textLor;
 
-	public Scene(int doorcount, int monsterCount, int treasureCount, String textLor) {
-		this.doorcount = doorcount;
+	private Hero[] heroes;
+
+	public Scene(int doorСount, int monsterCount, int treasureCount, String textLor) {
+		this.doorСount = doorСount;
 		this.monsterCount = monsterCount;
 		this.treasureCount = treasureCount;
 		this.textLor = textLor;
 	}
 
-	public int getDoorcount() {
-		return doorcount;
+	public int getDoorСount() {
+		return doorСount;
 	}
 
-	public void setDoorcount(int doorcount) {
-		this.doorcount = doorcount;
+	public void setDoorСount(int doorСount) {
+		this.doorСount = doorСount;
 	}
 
 	public int getMonsterCount() {
