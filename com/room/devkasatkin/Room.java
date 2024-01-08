@@ -1,6 +1,7 @@
 package com.room.devkasatkin;
 import com.heroes.devkasatkin.Hero;
 import com.heroes.devkasatkin.HeroControl;
+import com.treasure.devkasatkin.Treasure;
 
 public abstract class Room {
     private String name;
@@ -10,6 +11,7 @@ public abstract class Room {
     private boolean isExitKeyHere;
 
     private HeroControl monster;
+    private Treasure treasure;
 
     public Room(String name, boolean isMonsterHere, boolean isTreasureHere, boolean isExitHere, boolean isExitKeyHere) {
         this.name = name;
@@ -19,7 +21,19 @@ public abstract class Room {
         this.isExitKeyHere = isExitKeyHere;
     }
 
-    public void addMonster(int health, int attack, int defence, String name) {
-        this.monster = new HeroControl(new Hero(health, attack, defence, name));
+    public void addMonster(HeroControl monster) {
+        if (this.isMonsterHere) {
+            this.monster = monster;
+        } else {
+            this.monster = null;
+        }
+    }
+
+    public void addTreasure(Treasure treasure) {
+        if (this.isTreasureHere) {
+            this.treasure = treasure;
+        } else {
+            this.treasure = null;
+        }
     }
 }
