@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class TextLoader {
-    private String text;
-    public void getTextFromFile(String fileName) {
+
+    public static String getTextFromFile(String fileName) {
         try (FileReader fileReader = new FileReader(fileName);
              BufferedReader reader = new BufferedReader(fileReader)
         ){
@@ -15,14 +15,10 @@ public class TextLoader {
                 textFromFile.append(line);
                 textFromFile.append("\n");
             }
-            this.text = textFromFile.toString();
+            return textFromFile.toString();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
-    }
-
-    public String getText() {
-        return text;
+        return null;
     }
 }

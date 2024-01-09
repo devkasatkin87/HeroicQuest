@@ -1,5 +1,7 @@
 package com.gamecontrol.devkasatkin;
 
+import com.utils.devkasatkin.TextLoader;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,14 +21,13 @@ public class Game {
     }
 
     public void run() {
-
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))){
                 while (true) {
                     Menu.drawMeinMenu();
                     int choiceNumb = Integer.parseInt(reader.readLine());
                     switch (choiceNumb){
                         case (1):
-                            System.out.println("The game has been started...");
+                            System.out.println("Hello!");
                             break;
                         case (0):
                             System.exit(0);
