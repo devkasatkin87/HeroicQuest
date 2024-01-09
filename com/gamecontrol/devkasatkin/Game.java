@@ -23,11 +23,15 @@ public class Game {
     public void run() {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))){
                 while (true) {
-                    Menu.drawMeinMenu();
+                    Menu.drawMainMenu();
                     int choiceNumb = Integer.parseInt(reader.readLine());
                     switch (choiceNumb){
                         case (1):
                             System.out.println("Hello!");
+                            break;
+                        case (2):
+                            Background bg = new Background(TextLoader.getTextFromFile("Texts/Start_part1.txt"));
+                            bg.showTextAnimation();
                             break;
                         case (0):
                             System.exit(0);
@@ -37,7 +41,7 @@ public class Game {
                             break;
                     }
                 }
-            } catch(IOException e) {
+            } catch(IOException | InterruptedException e) {
                 System.out.println(e.getMessage());
             }
 
